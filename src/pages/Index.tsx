@@ -1,4 +1,20 @@
-import { Phone, MessageCircle, MapPin, Instagram, Facebook, Calendar, Music2, Bed, Waves, Fish, TreePine, UtensilsCrossed, Flower2, Share2, QrCode } from "lucide-react";
+import {
+  Phone,
+  MessageCircle,
+  MapPin,
+  Instagram,
+  Facebook,
+  Calendar,
+  Music2,
+  Bed,
+  Waves,
+  Fish,
+  TreePine,
+  UtensilsCrossed,
+  Flower2,
+  Share2,
+  QrCode,
+} from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
@@ -14,9 +30,10 @@ import galBarShelf from "@/assets/gallery-barshelf.jpg";
 const PHONE = "+9779705026021";
 const PHONE_DISPLAY = "+977 9705026021";
 const WHATSAPP_URL = `https://wa.me/9779705026021?text=${encodeURIComponent("Hi! I'd like to book a stay at Koilabhar Jungle Resort.")}`;
-const MAPS_UR`";
+const MAPS_URL = "https://maps.app.goo.gl/5a7tYKUfFoTr9LsVA";
 const INSTAGRAM_URL = "https://www.instagram.com/sunilpatel9943";
-const TIKTOK_URL = "https://www.tiktok.com/@koilavar_jungle_resort?_r=1&_t=ZS-95cQ0WuYhCE";
+const TIKTOK_URL =
+  "https://www.tiktok.com/@koilavar_jungle_resort?_r=1&_t=ZS-95cQ0WuYhCE";
 const FACEBOOK_URL = "https://www.facebook.com/sunil.patel.409609";
 
 const facilities = [
@@ -56,7 +73,8 @@ const ActionButton = ({
   const styles = {
     default: "bg-card hover:bg-muted text-foreground border border-border",
     primary: "bg-gradient-jungle text-primary-foreground hover:opacity-95",
-    accent: "bg-gradient-sunset text-secondary-foreground hover:opacity-95 shadow-glow",
+    accent:
+      "bg-gradient-sunset text-secondary-foreground hover:opacity-95 shadow-glow",
   }[variant];
 
   return (
@@ -73,7 +91,9 @@ const ActionButton = ({
         <span className="text-base font-semibold">{label}</span>
         {sublabel && <span className="text-xs opacity-80">{sublabel}</span>}
       </span>
-      <span className="ml-auto opacity-50 transition-smooth group-hover:translate-x-1 group-hover:opacity-100">→</span>
+      <span className="ml-auto opacity-50 transition-smooth group-hover:translate-x-1 group-hover:opacity-100">
+        →
+      </span>
     </a>
   );
 };
@@ -89,7 +109,9 @@ const Index = () => {
       url: pageUrl,
     };
     if (navigator.share) {
-      try { await navigator.share(shareData); } catch {}
+      try {
+        await navigator.share(shareData);
+      } catch {}
     } else {
       navigator.clipboard.writeText(pageUrl);
       setCopied(true);
@@ -134,7 +156,11 @@ const Index = () => {
           <div className="rounded-3xl bg-gradient-card p-6 shadow-elegant ring-1 ring-border/60 animate-fade-up">
             <div className="flex flex-col items-center text-center">
               <div className="mb-4 -mt-16 h-28 w-28 overflow-hidden rounded-3xl bg-card shadow-elegant ring-4 ring-background animate-float">
-                <img src={logo} alt="Koilabhar Jungle Resort logo" className="h-full w-full object-cover" />
+                <img
+                  src={logo}
+                  alt="Koilabhar Jungle Resort logo"
+                  className="h-full w-full object-cover"
+                />
               </div>
               <h1 className="font-display text-3xl font-bold leading-tight text-primary sm:text-4xl">
                 Koilabhar Jungle Resort
@@ -143,9 +169,10 @@ const Index = () => {
                 🌿 Experience the Loveliness of Terai 🌿
               </p>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Escape to the peaceful jungle vibes of Terai. Enjoy nature, fresh air, comfortable
-                stays, delicious local foods, and fun activities. Perfect for family getaways,
-                weekend relaxation, and nature lovers.
+                Escape to the peaceful jungle vibes of Terai. Enjoy nature,
+                fresh air, comfortable stays, delicious local foods, and fun
+                activities. Perfect for family getaways, weekend relaxation, and
+                nature lovers.
               </p>
             </div>
           </div>
@@ -179,11 +206,7 @@ const Index = () => {
             label="Instagram"
             sublabel="@sunilpatel9943"
           />
-          <ActionButton
-            href={FACEBOOK_URL}
-            icon={Facebook}
-            label="Facebook"
-          />
+          <ActionButton href={FACEBOOK_URL} icon={Facebook} label="Facebook" />
           <ActionButton
             href={TIKTOK_URL}
             icon={Music2}
@@ -203,7 +226,9 @@ const Index = () => {
         <section className="mt-10 px-5">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
-            <h2 className="font-display text-2xl font-semibold text-primary">Facilities</h2>
+            <h2 className="font-display text-2xl font-semibold text-primary">
+              Facilities
+            </h2>
             <span className="h-px flex-1 bg-border" />
           </div>
           <div className="grid grid-cols-2 gap-3">
@@ -215,7 +240,9 @@ const Index = () => {
                 <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Icon className="h-5 w-5" />
                 </span>
-                <span className="text-sm font-medium leading-snug text-foreground">{label}</span>
+                <span className="text-sm font-medium leading-snug text-foreground">
+                  {label}
+                </span>
               </div>
             ))}
           </div>
@@ -225,7 +252,9 @@ const Index = () => {
         <section className="mt-10 px-5">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
-            <h2 className="font-display text-2xl font-semibold text-primary">Gallery</h2>
+            <h2 className="font-display text-2xl font-semibold text-primary">
+              Gallery
+            </h2>
             <span className="h-px flex-1 bg-border" />
           </div>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -251,13 +280,16 @@ const Index = () => {
         <section className="mt-10 px-5">
           <div className="mb-5 flex items-center gap-3">
             <span className="h-px flex-1 bg-border" />
-            <h2 className="font-display text-2xl font-semibold text-primary">Share This Page</h2>
+            <h2 className="font-display text-2xl font-semibold text-primary">
+              Share This Page
+            </h2>
             <span className="h-px flex-1 bg-border" />
           </div>
           <div className="rounded-3xl bg-gradient-jungle p-6 text-primary-foreground shadow-elegant">
             <div className="flex flex-col items-center text-center">
               <p className="mb-5 max-w-xs text-sm opacity-90">
-                Scan this QR code to instantly share Koilabhar Jungle Resort with friends & family.
+                Scan this QR code to instantly share Koilabhar Jungle Resort
+                with friends & family.
               </p>
               <div className="rounded-2xl bg-background p-4 shadow-soft">
                 <QRCodeSVG
@@ -301,7 +333,9 @@ const Index = () => {
                 <MapPin className="h-5 w-5" />
               </span>
               <div className="flex-1">
-                <h3 className="font-display text-lg font-semibold text-primary">Find Us</h3>
+                <h3 className="font-display text-lg font-semibold text-primary">
+                  Find Us
+                </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
                   Koilabhar Mai Temple, Koilabhar, Bagbana, Parsa 44300, Nepal
                 </p>
