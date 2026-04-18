@@ -32,8 +32,7 @@ const PHONE_DISPLAY = "+977 9705026021";
 const WHATSAPP_URL = `https://wa.me/9779705026021?text=${encodeURIComponent("Hi! I'd like to book a stay at Koilabhar Jungle Resort.")}`;
 const MAPS_URL = "https://maps.app.goo.gl/5a7tYKUfFoTr9LsVA";
 const INSTAGRAM_URL = "https://www.instagram.com/sunilpatel9943";
-const TIKTOK_URL =
-  "https://www.tiktok.com/@koilavar_jungle_resort?_r=1&_t=ZS-95cQ0WuYhCE";
+const TIKTOK_URL = "https://www.tiktok.com/@koilavar_jungle_resort?_r=1&_t=ZS-95cQ0WuYhCE";
 const FACEBOOK_URL = "https://www.facebook.com/sunil.patel.409609";
 
 const facilities = [
